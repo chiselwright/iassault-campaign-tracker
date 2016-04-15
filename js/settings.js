@@ -1,1 +1,1 @@
-FIREBASE_URL = 'https://iassault-campaign.firebaseio.com/';
+FIREBASE_URL = 'https://vivid-heat-4800.firebaseio.com/';
