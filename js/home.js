@@ -6,7 +6,12 @@ $(function () {
         return;
       }
       if (authData.uid !== null) {
-        window.location.pathname = "/campaigns/";
+        if (authData.uid && window.location.pathname === "/") {
+            window.location.pathname = "/campaigns/";
+        }
+        else if (authData.uid && window.location.pathname !== null) {
+            window.location.pathname = window.location.pathname + "campaigns/";
+        }
       }
     }, {
       scope: "email,public_profile"
