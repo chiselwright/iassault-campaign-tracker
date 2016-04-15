@@ -8,12 +8,12 @@ function handle_auth() {
   }
   var auth = ref.getAuth();
   if (auth === null) {
-    if (window.location.pathname !== "/") {
-      window.location.pathname = "/";
+    if (window.location.pathname !== APP_PATHNAME) {
+      window.location.pathname = APP_PATHNAME;
     }
   } else {
-    if (auth.uid && window.location.pathname === "/") {
-      window.location.pathname = "/campaigns/";
+    if (auth.uid && window.location.pathname === APP_PATHNAME) {
+      window.location.pathname = APP_PATHNAME + "campaigns";
     }
   }
 }
